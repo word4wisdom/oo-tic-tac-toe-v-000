@@ -79,15 +79,6 @@ end
 end
 
 
-   def won?
-    WIN_COMBINATIONS.any? do |combo|
-      if position_taken?(combo[0]) && @board[combo[0]] == @board[combo[1]] && @board[combo[1]] == @board[combo[2]]
-        return combo
-       end
-     end
-  end 
- 
-=======
  def won?
   WIN_COMBINATIONS.any? do |index|
     @board[index[0]] == @board[index[1]] &&
@@ -95,8 +86,7 @@ end
     position_taken?(index[0])
     end
  end
->>>>>>> d06aa3c3df74804569bcf5cc5e877dcc72ed7270
-
+ 
 def full?
   @board.all?{|element| element == "X" || element == "O"}
 end
@@ -111,7 +101,7 @@ def over?
 end
 
 def winner
-  if winning_combo = won?
+  if winning_combo == won?
     @board[winning_combo.first]
   end
 end
