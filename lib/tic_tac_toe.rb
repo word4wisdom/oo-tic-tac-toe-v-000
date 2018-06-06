@@ -101,7 +101,7 @@ def over?
 end
 
 def winner
-  if winning_combo == won?
+  if winning_combo = won?
     @board[winning_combo.first]
   end
 end
@@ -112,7 +112,6 @@ end
   end
   if won?
     puts "Congratulations #{winner}!"
-<<<<<<< HEAD
   elsif draw?
     puts "Cat's Game!"
     end
@@ -122,13 +121,5 @@ end
 
 
 
-=======
-  elsif draw?(board)
-    puts "Cats Game!"
-  end
-end
 
-binding.pry
-  
->>>>>>> d06aa3c3df74804569bcf5cc5e877dcc72ed7270
 
