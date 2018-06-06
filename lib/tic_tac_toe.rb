@@ -32,11 +32,8 @@ def input_to_index(user_input)
 end
 
 
-<<<<<<< HEAD
+
 def move(index, token)
-=======
-def move(index, token = "X")
->>>>>>> d06aa3c3df74804569bcf5cc5e877dcc72ed7270
   @board[index] = token 
 end
   
@@ -45,23 +42,13 @@ def position_taken?(index)
   @board[index] !=  " "
   end
 
-<<<<<<< HEAD
   def valid_move?(index)
     !position_taken?(index) && index.between?(0,8)
   end
-=======
-def valid_move?(index)
-if index.between?(0,8) && !position_taken?(index)
-true
-     end
-  end 
 
->>>>>>> d06aa3c3df74804569bcf5cc5e877dcc72ed7270
 
  
-
 def turn_count
-<<<<<<< HEAD
   counter = 0
   @board.each do |spaces|
     if spaces == "X" || spaces == "O"
@@ -69,10 +56,8 @@ def turn_count
     end
   end
   counter
-=======
-  @board.count{|token| token == "X" || token == "O"}
->>>>>>> d06aa3c3df74804569bcf5cc5e877dcc72ed7270
-end
+end  
+
 
 def current_player
   turn_count % 2 == 0 ? "X" : "O"
