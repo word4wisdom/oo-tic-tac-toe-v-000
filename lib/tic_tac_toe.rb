@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> d06aa3c3df74804569bcf5cc5e877dcc72ed7270
-require 'pry'
 
 class TicTacToe
     def initialize(board = nil)
