@@ -78,7 +78,6 @@ end
   end
 end
 
-<<<<<<< HEAD
 
    def won?
     WIN_COMBINATIONS.any? do |combo|
